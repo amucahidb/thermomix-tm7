@@ -204,7 +204,7 @@ async def test_offline_appliance_has_device_before_first_push(
     await hass.async_block_till_done()
     assert hass.states.get("sensor.thermomix_tm7_cooking_state").state == "running"
     assert config_entry.data["device_map"] == {DEVICE_ID: "user-1_0"}
-    assert len(hass.states.async_entity_ids("sensor")) == 9
+    assert len(hass.states.async_entity_ids("sensor")) == 10
 
 
 async def test_mapping_survives_restart(
