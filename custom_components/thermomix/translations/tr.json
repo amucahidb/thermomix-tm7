@@ -1,0 +1,118 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Bu Cookidoo hesabı zaten ekli",
+      "reauth_successful": "Yeniden giriş başarılı",
+      "unique_id_mismatch": "Hesap, yeniden giriş yapılan hesapla aynı değil"
+    },
+    "error": {
+      "cannot_connect": "Cookidoo'ya bağlanılamadı",
+      "invalid_auth": "E-posta ya da şifre hatalı",
+      "unknown": "Beklenmeyen hata"
+    },
+    "step": {
+      "language": {
+        "data": {
+          "language": "Dil"
+        },
+        "data_description": {
+          "language": "Cookidoo içeriğinin dili."
+        },
+        "title": "Thermomix kurulumu"
+      },
+      "reauth_confirm": {
+        "data": {
+          "email": "E-posta",
+          "password": "Şifre"
+        },
+        "description": "Thermomix durumunu almaya devam etmek için Cookidoo'ya yeniden giriş yap.",
+        "title": "Cookidoo'ya yeniden giriş"
+      },
+      "user": {
+        "data": {
+          "country": "Ülke",
+          "email": "E-posta",
+          "password": "Şifre"
+        },
+        "data_description": {
+          "country": "Cookidoo hesabının ülkesi.",
+          "email": "Thermomix'in bağlı olduğu Cookidoo hesabının e-postası.",
+          "password": "Bu Cookidoo hesabının şifresi."
+        },
+        "description": "Pişirme bilgilerinin gelmesi için Thermomix'te uzaktan izleme açık olmalı (Ayarlar → Uzaktan izleme).",
+        "title": "Thermomix kurulumu"
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "connected": {
+        "name": "Bağlantı"
+      },
+      "cooking": {
+        "name": "Pişirme"
+      }
+    },
+    "event": {
+      "cooking": {
+        "name": "Pişirme olayı",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "acknowledged": "Onaylandı",
+              "cleared": "Temizlendi",
+              "done": "Bitti",
+              "message": "Mesaj",
+              "paused": "Duraklatıldı",
+              "resumed": "Devam etti",
+              "stale": "Veri eskidi",
+              "started": "Başladı",
+              "step_changed": "Adım değişti",
+              "updated": "Güncellendi"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "current_temperature": {
+        "name": "Anlık sıcaklık"
+      },
+      "finish_time": {
+        "name": "Adım bitiş saati"
+      },
+      "last_update": {
+        "name": "Son güncelleme"
+      },
+      "message": {
+        "name": "Mesaj"
+      },
+      "phase": {
+        "name": "Aşama"
+      },
+      "recipe": {
+        "name": "Tarif"
+      },
+      "remaining_time": {
+        "name": "Kalan süre"
+      },
+      "state": {
+        "name": "Pişirme durumu",
+        "state": {
+          "acknowledged": "Onaylandı",
+          "done": "Bitti",
+          "idle": "Boşta",
+          "paused": "Duraklatıldı",
+          "running": "Çalışıyor",
+          "stale": "Veri eskidi"
+        }
+      },
+      "step": {
+        "name": "Adım"
+      },
+      "target_temperature": {
+        "name": "Hedef sıcaklık"
+      }
+    }
+  }
+}

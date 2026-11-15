@@ -1,0 +1,25 @@
+{
+  "domain": "thermomix",
+  "name": "Thermomix",
+  "categories": [
+    "appliances_cleaning.cooking"
+  ],
+  "codeowners": [
+    "@amucahidb"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/amucahidb/thermomix-tm7",
+  "integration_type": "hub",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/amucahidb/thermomix-tm7/issues",
+  "loggers": [
+    "cookidoo_api",
+    "firebase_messaging"
+  ],
+  "requirements": [
+    "cookidoo-api>=0.18.4",
+    "firebase-messaging>=0.4.5,<0.5"
+  ],
+  "version": "0.2.0"
+}
