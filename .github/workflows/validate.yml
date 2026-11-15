@@ -37,5 +37,12 @@ jobs:
           pip install --root-user-action=ignore --no-deps pytest-homeassistant-custom-component
           pip install --root-user-action=ignore -r requirements_test.txt
       - name: Run tests
-        # respx imports httpx before the HA test plugin can alias it
-        run: python -m pytest -q -p no:cacheprovider -p no:respx
+        # Another installed plugin imports httpx before the HA test plugin can
+        # alias it, so load the plugins explicitly, the HA one first.
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+        run: >-
+          python -m pytest -q -p no:cacheprovider
+          -p pytest_homeassistant_custom_component.plugins
+          -p pytest_asyncio.plugin -p pytest_freezer -p pytest_socket
+          -p syrupy -p pytest_timeout
