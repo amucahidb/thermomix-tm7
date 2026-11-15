@@ -37,4 +37,5 @@ jobs:
           pip install --root-user-action=ignore --no-deps pytest-homeassistant-custom-component
           pip install --root-user-action=ignore -r requirements_test.txt
       - name: Run tests
-        run: python -m pytest -q -p no:cacheprovider
+        # respx imports httpx before the HA test plugin can alias it
+        run: python -m pytest -q -p no:cacheprovider -p no:respx
